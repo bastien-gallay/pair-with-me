@@ -1,0 +1,11 @@
+{
+  "default": true,
+
+  // Prose is hard-wrapped at 80, but the protocol tables and ASCII phase/loop
+  // diagrams run wider on purpose — same call as the daily-ops projects.
+  "MD013": false,
+
+  // The invocation uses <issue> / <slug> / <n> placeholders; markdownlint
+  // mistakes the angle brackets for inline HTML.
+  "MD033": false
+}
