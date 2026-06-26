@@ -79,6 +79,17 @@ These hold in every phase and override convenience:
 10. **A gate isn't closed until its §7 line is appended.** Treat the log write as
    part of the gate ritual, not an afterthought — if it wasn't logged, the gate
    isn't done.
+11. **Ask only what developing the work requires; carry the rest to a pause.**
+   Mid-phase, raise a question only when getting the work *right* depends on the
+   human's answer — if you can resolve it and proceed, do, and announce the call.
+   Discretionary "force a thought" asks don't fire scattered through the flow;
+   the pauses (§3) are where the human is asked to produce. This is stricter than
+   §1.5's leverage test: leverage is necessary but not sufficient — the ask must
+   also be *obligatory*, something the work can't correctly continue without.
+12. **Every pause puts something concrete in front of the human to look at.** A
+   diff, a before→after diagram, a facts table, a rendered artifact — never a
+   bare question. The human can't understand (or defend, or decide) against
+   nothing. A pause with nothing to examine isn't a pause, it's an interruption.
 
 ## 2. Depth gate (first interaction)
 
@@ -100,7 +111,11 @@ decision, Phase 4 verify, Pause B defense always run):
 - `light` → irreducible gates plus discretionary gates only on the
   *highest-leverage* claims.
 - `full` → discretionary gates fire wherever the human's judgment has leverage
-  (§1.5).
+  (§1.5) **and** the answer is obligatory to develop the work right (§1.11).
+
+Depth never lowers the floor: the irreducible gates and both pauses always run,
+and an ask that isn't obligatory for the work doesn't fire at any depth — it
+waits for a pause or gets resolved and announced.
 
 The human can re-dial depth mid-session — "too many interruptions, drop to
 light" is always a valid override.
@@ -112,11 +127,11 @@ PHASE          DEBT     LEADS   GATE             CORE MOVE
 0 Frame        intent   HUMAN   prose (async ok) human commits verdict/cause → AI attacks
 1 Isolate      tech     AI      cheap (confirm)  tidy-first seam + test data + related docs
 2 Drive tests  tech     MIXED   cheap per-test   §5 loop: call outcome → RED → GREEN → tidy → REFLECT
-   ── PAUSE A ──         —       prose            facts-only, human decides
+   ── PAUSE A ──         —       prose            facts shown, human decides
 3 Implement    tech     AI      —                harness-guarded
 4 Verify       tech     HUMAN   —                run/screenshot the un-unit-testable part
 5 Prove        tech     AI      —                coverage + mutation (survivor → reopen P2)
-   ── PAUSE B ──         cogn    prose            human defends final shape
+   ── PAUSE B ──         cogn    prose            diff shown, human defends shape
 6 Close        intent   MIXED   —                adversarial review + CUPID + retention pass (§6)
 ```
 
@@ -150,8 +165,10 @@ cheap gate.
 having the human call the expected outcome first; write the obvious ones
 silently. Use property-based tests where the rule is total/shape-driven.
 
-**Pause A.** Present a **facts-only** summary (+ the strongest case for each
-option; state no preference until the human commits). Mandatory human decision.
+**Pause A.** Present a **facts-only** summary the human can read — the option
+space laid out, the strongest case for each, plus whatever concrete material
+grounds the decision (the failing tests so far, the data, a contract sketch).
+State no preference until the human commits. Mandatory human decision (§1.12).
 
 **Phase 3 — Implement (tech, AI).** Harness-guarded; ugly-then-tidy.
 
@@ -168,7 +185,9 @@ technical one.
 testing. A **surviving mutant reopens Phase 2** (it is a missing test, looped
 back), not a footnote.
 
-**Pause B.** The human **defends the final shape** in prose.
+**Pause B.** Render the final shape first — the diff and a before→after of what
+changed — then the human **defends it** in prose against something concrete on
+screen, not from memory (§1.12).
 
 **Phase 6 — Close (intent).** Adversarial self-review; CUPID refactor of the
 modified methods (readability, tech/business naming separation, lower
@@ -310,3 +329,11 @@ Added from session feedback:
 - **Interruption is leverage-gated, not maximised** (§1.5, §2, §4) — low-stakes
   gates where the AI plainly knew the answer read as busywork and trained rubber-
   stamping. Depth now dials interruption density and is re-dialable mid-session.
+- **Asks must be obligatory, not just leverage-bearing; pauses must show, not
+  just ask** (§1.11–12, §2, §3) — discretionary "force a thought" questions
+  scattered through the flow were still friction even when leverage-gated. The
+  bar tightened: mid-phase, ask only what the work can't correctly continue
+  without; everything else waits for a pause or is resolved and announced. The
+  pauses stay (the deliberate checkpoints), but each must now put concrete
+  material on screen — facts at Pause A, the rendered diff at Pause B — so the
+  human decides/defends against something they can look at, never a bare prompt.

@@ -13,8 +13,10 @@ The canonical protocol lives in [`SKILL.md`](SKILL.md). In one breath:
   delegated to the project harness — lints, tests, mutation).
 - **Test-first** with a real per-test `Red → Green → Refactor → Reflect` loop,
   not a single batch of red tests.
-- **Two pauses** where the human commits the call and defends the final shape;
-  interruption is **leverage-gated** and dialed by the depth choice.
+- **Two pauses** where the human commits the call and defends the final shape,
+  each showing concrete material to look at (facts, then the rendered diff);
+  mid-flow the process **asks only what developing the work requires**,
+  leverage-gated and dialed by the depth choice.
 - **Post-process retention** instead of in-process tricks: a visual before→after
   recap and a novelty ledger for spaced review — no planted falsehoods.
 - **Async gates** that interrupt where it has leverage (continue-capped vs park).
