@@ -5,7 +5,7 @@ to reduce the **triple debt** — technical, cognitive, intent — and keep the
 human the author of their own system instead of a reviewer of AI output they
 can't defend.
 
-The canonical protocol lives in [`SKILL.md`](SKILL.md). In one breath:
+The canonical protocol lives in [`SKILL.md`](skills/pair-with-me/SKILL.md). In one breath:
 
 - **Spine:** adversarial dialogue — the human commits a position, the AI attacks
   it, the human revises. Human output always precedes the AI reveal.
