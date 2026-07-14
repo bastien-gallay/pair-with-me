@@ -1,0 +1,29 @@
+{
+  "name": "pair-with-me",
+  "owner": {
+    "name": "Bastien Gallay"
+  },
+  "metadata": {
+    "description": "pair-with-me — single-plugin marketplace.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "pair-with-me",
+      "source": "./",
+      "description": "Work one issue as an adversarial pair, not a delegation — reduce the triple debt and keep the human the author of their own system.",
+      "version": "0.1.0",
+      "license": "MIT",
+      "homepage": "https://github.com/bastien-gallay/pair-with-me",
+      "repository": "https://github.com/bastien-gallay/pair-with-me",
+      "category": "productivity",
+      "tags": [
+        "pair-with-me",
+        "pairing",
+        "tdd",
+        "adversarial",
+        "engineering-practice"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "pair-with-me",
+  "version": "0.1.0",
+  "description": "Work one issue as an adversarial pair, not a delegation — reduce the triple debt (technical, cognitive, intent) and keep the human the author of their own system.",
+  "author": {
+    "name": "Bastien Gallay"
+  },
+  "homepage": "https://github.com/bastien-gallay/pair-with-me",
+  "repository": "https://github.com/bastien-gallay/pair-with-me",
+  "license": "MIT",
+  "keywords": [
+    "pair-with-me",
+    "pairing",
+    "tdd",
+    "adversarial",
+    "engineering-practice"
+  ]
+}

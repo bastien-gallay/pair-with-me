@@ -10,18 +10,26 @@
 set -euo pipefail
 
 REPO_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# The skill lives at skills/pair-with-me/ (class-A layout); link that dir so
+# ~/.claude/skills/pair-with-me/SKILL.md resolves for discovery.
+SKILL_SRC="$REPO_DIR/skills/pair-with-me"
 TARGET_DIR="$HOME/.claude/skills"
 TARGET="$TARGET_DIR/pair-with-me"
+
+if [[ ! -f "$SKILL_SRC/SKILL.md" ]]; then
+  echo "❌ Expected $SKILL_SRC/SKILL.md — is the repo layout intact?" >&2
+  exit 1
+fi
 
 mkdir -p "$TARGET_DIR"
 
 if [[ "${1:-}" == "--copy" ]]; then
   rm -rf "$TARGET"
-  cp -R "$REPO_DIR" "$TARGET"
+  cp -R "$SKILL_SRC" "$TARGET"
   echo "✅ Skill copied to: $TARGET"
 else
-  ln -sfn "$REPO_DIR" "$TARGET"
-  echo "✅ Skill linked: $TARGET → $REPO_DIR"
+  ln -sfn "$SKILL_SRC" "$TARGET"
+  echo "✅ Skill linked: $TARGET → $SKILL_SRC"
 fi
 
 echo

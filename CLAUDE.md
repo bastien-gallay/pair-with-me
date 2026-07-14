@@ -11,7 +11,7 @@ other files exist only to install, lint, and iterate on it.
 
 ## Files that matter
 
-- **`SKILL.md`** — the canonical protocol and the only file with real content.
+- **`skills/pair-with-me/SKILL.md`** — the canonical protocol and the only file with real content.
   YAML frontmatter (`name`, `description`) drives skill discovery/triggering; the
   body is the protocol Claude executes when invoked. Editing this file *is* the
   work. It is structured as numbered sections §0–§8 (the one idea → always-on
